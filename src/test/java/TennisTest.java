@@ -1,13 +1,12 @@
-import static org.junit.Assert.*;
-
-import java.util.Arrays;
-import java.util.Collection;
-
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
+
+import java.util.Arrays;
+import java.util.Collection;
+
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class TennisTest {
@@ -48,7 +47,7 @@ public class TennisTest {
                 { 1, 4, "Win for player2"},
 
                 { 3, 2, "Forty-Thirty"},
-                { 2, 3, "Thirty-Forty"},
+                 { 2, 3, "Thirty-Forty"},
                 { 4, 2, "Win for player1"},
                 { 2, 4, "Win for player2"},
                 
