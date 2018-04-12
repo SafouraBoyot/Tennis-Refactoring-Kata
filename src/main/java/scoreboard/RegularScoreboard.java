@@ -15,8 +15,8 @@ public class RegularScoreboard implements Scoreboard {
     public String showScore() {
         int currentPlayerScore;
         StringBuilder finalScore = new StringBuilder();
-        for (int i = 1; i < 3; i++) {
-            currentPlayerScore = getCurrentPlayerScore(finalScore, i);
+        for (int player = 1; player <= 2; player++) {
+            currentPlayerScore = getCurrentPlayerScore(finalScore, player);
             if (Score.isLove(currentPlayerScore))
                 finalScore.append(Score.LOVE.scoreText());
             if (Score.isFifteen(currentPlayerScore))
@@ -30,8 +30,8 @@ public class RegularScoreboard implements Scoreboard {
     }
 
 
-    private int getCurrentPlayerScore(StringBuilder finalScore, int i) {
-        if (i == 1) return playerOne.getPlayerScore();
+    private int getCurrentPlayerScore(StringBuilder finalScore, int player) {
+        if (player == 1) return playerOne.getPlayerScore();
         finalScore.append("-");
         return playerTwo.getPlayerScore();
     }
